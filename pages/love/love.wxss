@@ -1,0 +1,95 @@
+/* pages/circle/list.wxss */
+page {
+  /* background: transparent; */
+}
+
+/* 
+  整个页面的宽度 750rpx
+  左边距 20rpx 
+  右边距 20rpx
+  头像设置 80rpx
+  头像距右侧部分 10rpx
+
+  右侧剩余 750 - 20 -20 -80 - 10 = 620
+*/
+.scroll-content {
+  height: 85vh;
+}
+
+.content-all {
+  width: 100%;
+  padding: 20rpx 0rpx;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #fff; */
+}
+
+.content {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 20%;
+  right: 10px;
+}
+
+.weui-slidecells {
+  height: 70px;
+  margin: 10px;
+  margin-top: 0px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.weui-slidecell {
+  height: 70px;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title {
+  font-size: 18px;
+  padding-bottom: 10px;
+  height: 25px;
+}
+
+.time {
+  font-size: 14px;
+  color: gray;
+  height: 25px;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px
+}
+
+.rotate {
+  transform: rotateZ(-90deg)
+}
+
+.nodata {
+  text-align: center;
+}
+.love{
+  background-color: sandybrown;
+}

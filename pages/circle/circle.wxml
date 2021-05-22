@@ -1,0 +1,46 @@
+<!--pages/circle/list.wxml-->
+
+<!-- 搜索框 -->
+<mp-searchbar placeholder='请输入待搜索的内容' bindinput='search' bindclear='clear' value="{{searchContent}}"></mp-searchbar>
+<!-- 滚动 -->
+<scroll-view class="scroll-content" scroll-y refresher-enabled lower-threshold='{{50}}' refresher-threshold='{{60}}'
+	model:scroll-top="{{scrollTop}}" refresher-triggered='{{isRefresh}}' bindrefresherrefresh='refresh'
+	bindrefresherrestore='stopRefresh' bindscrolltolower='getMore'>
+	<view class="content-all">
+
+		<view class="content" wx:for="{{list}}" wx:index="index" bindtouchstart="bindTouchStart">
+			<view class="weui-slidecells" bindtap="getInfo" data-item="{{item}}">
+				<mp-slideview buttons="{{item.slideButtons}}" icon="{{true}}" data-item="{{item}}" bindbuttontap="slideButtonTap">
+					<view class="weui-slidecell">
+						<view class="header">
+							<view class='title'>
+								{{item.title}}
+							</view>
+							<view class='time'>
+								{{item.time}}
+							</view>
+						</view>
+					</view>
+				</mp-slideview>
+			</view>
+
+		</view>
+		<view wx:if="{{!haveMoreData}}" class="nodata">
+		没有更多数据啦
+		</view>
+	</view>
+</scroll-view>
+
+
+<!-- 控制栏 -->
+  <view class="control">
+	<view class="icon-wrapper">
+		<mp-icon icon='camera' type='field' color='#fff' bindtap="goPublish"></mp-icon>
+
+	</view>
+	<view class="icon-wrapper rotate">
+		<mp-icon icon='arrow' type='field' color='#fff' bindtap="totop"></mp-icon>
+	</view>
+
+	  
+</view>

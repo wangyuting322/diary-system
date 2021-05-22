@@ -1,0 +1,17 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<!--miniprogram/pages/mine/mine.wxml-->
+<view>
+  <view class="weui-cells">
+					<view class="weui-cell">
+						<view class="avatar-parent">
+							<image class="avatar-image" src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+						</view>
+						<view class="nickname">{{userInfo.nickName}}</view>
+					</view>
+        </view>
+        <view class="weui-cells">
+					<view class="weui-cell" bindtap="clickWeather">
+						<view >天气</view>
+					</view>
+				</view>
+</view>

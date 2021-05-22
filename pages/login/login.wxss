@@ -1,0 +1,23 @@
+/* pages/login/login.wxss */
+page {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.text_style{
+  margin-top: 40rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  text-align:center;
+  font-size: 40px;
+}
+.text_style1{
+  
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+  text-align:center;
+  font-size: 30rpx;
+}

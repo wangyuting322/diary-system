@@ -1,0 +1,17 @@
+/* pages/publish/publish.wxss */
+.weui-cell{
+  background-color: white;
+}
+.weui-uploader__file{
+  position: relative;
+}
+.delete{
+position: absolute;
+right: 0px;
+top: 0px;
+width:25px;
+height: 25px;
+text-align: center;
+background-color: white;
+border-radius: 50%;
+}

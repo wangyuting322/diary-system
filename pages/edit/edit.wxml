@@ -1,0 +1,42 @@
+<!--pages/publish/publish.wxml-->
+
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="weui-cell__bd">
+  <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+    <mp-cell prop="title" title="日记标题">
+      <input data-field="title" class="weui-input" value='{{formData.title}}' placeholder="请输入日记标题"
+        bindinput="changeInput" />
+    </mp-cell>
+    <mp-cell prop="content" title="日记内容">
+      <textarea data-field="content" class="weui-textarea" value='{{formData.content}}' bindinput="changeInput"
+        placeholder="请输入日记内容" style="height: 1.25em" />
+      </mp-cell>
+  </mp-form>
+
+
+	<view class="weui-cell">
+		<view class="weui-cell__bd">
+			<view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__overview">
+                <view class="weui-uploader__title">图片上传</view>
+            </view>
+          </view>
+          <view class="weui-uploader__bd">
+              <view class="weui-uploader__files">
+                  <block wx:for="{{imageList}}" wx:key="*this">
+                      <view class="weui-uploader__file" data-index="{{index}}" bindtap="previewImage">
+                        <view class="delete" catchtap="deleteImage" data-index='{{index}}'>x</view>
+                          <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                      </view>
+                  </block>
+              </view>
+              <view wx:if="{{imageList.length < maxCount}}" class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+</view>

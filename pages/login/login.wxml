@@ -1,0 +1,7 @@
+<!--pages/login/login.wxml-->
+
+<view>
+  <view class="text_style">微信登录</view>
+  <view class="text_style1">将获取您公开的信息，如头像，昵称，性别等等</view>
+  <button  bindtap="getUserProfile" type="primary" size="default">授权登录</button>
+</view>

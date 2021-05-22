@@ -1,0 +1,52 @@
+<!--pages/info/info.wxml-->
+<view>
+  <view wx:if='{{info}}' class="wrapper">
+    <scroll-view style="height:90vh">
+
+      <!-- 用户 -->
+      <view class="user-wrapper">
+        <view class="avatar">
+          <image src="{{info.userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="other">
+
+          <view class="nickname">{{info.userInfo.nickName}}</view>
+          <view class="time">{{info.time}}</view>
+        </view>
+      </view>
+
+      <!-- 内容 -->
+      <view class="content-wrapper">
+        <view class="title">{{info.title}}</view>
+        <view class="content">{{info.content}}</view>
+        <view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files">
+              <block wx:for="{{info.imageList}}" wx:key="*this">
+                <view class="weui-uploader__file" data-index="{{index}}" bindtap="previewImage">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+            </view>
+            <view wx:if="{{imageList.length < maxCount}}" class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="control">
+      <view class="control-single" data-item='{{info}}' bindtap="edit">
+        <image src="/static/images/edit (1).png"></image>
+      </view>
+      <view class="control-single"  data-item='{{info}}' bindtap="clickLove">
+        <image wx:if="{{info.isLove}}" src="/static/images/collection-fill.png"></image>
+        <image wx:else src="/static/images/collection.png"></image>
+      </view>
+      <view class="control-single"  data-item='{{info}}' bindtap="delete">
+        <image src="/static/images/delete (1).png"></image>
+      </view>
+    </view>
+  </view>
+  <view wx:else>暂无数据</view>
+</view>

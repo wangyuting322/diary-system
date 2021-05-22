@@ -1,0 +1,130 @@
+/* pages/home/home.wxss */
+.mine {
+  background-color: #fff;
+}
+
+.player image:nth-of-type(1){
+
+  top: 20rpx;
+  right: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #f0f0f0;
+}
+
+.msg-item {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 20rpx 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.msg-item .msg-image {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #f0f0f0;
+}
+
+.msg-item .msg-content {
+  width: 60rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.msg-item .msg-content .msg-content-head {
+  width: 620rpx;
+  height: 50rpx;
+  display: flex;
+}
+
+.msg-item .msg-content .msg-content-head .msg-title {
+  font-size: 32rpx;
+  width: 450rpx;
+  line-height: 45rpx;
+  color: #3b4977;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.msg-item .msg-content .msg-content-head .msg-time {
+  font-size: 26rpx;
+  line-height: 45rpx;
+  color: #3b4977;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.msg-item .msg-content .msg-text {
+  font-size: 26rpx;
+  line-height: 35rpx;
+
+  color: #696969;
+}
+
+.address-book {
+  background-color: #fff;
+}
+
+.avatar-parent {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar-image {
+  width: 60px;
+  height: 60px;
+}
+
+.nickname {
+  margin-left: 10rpx;
+  font-size: 36rpx;
+  color: black;
+}
+
+
+/** 
+  操作面板
+**/
+.operation-pannel {
+  width: 200rpx;
+  position: fixed;
+  top: 65px;
+  left: 10rpx;
+  background-color: #4c5154;
+}
+
+.operation-pannel .operation-pannel-item {
+  display: flex;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.operation-pannel .operation-pannel-item .operation-pannel-image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.operation-pannel .operation-pannel-item .operation-pannel-text {
+  line-height: 30rpx;
+  margin-left: 10rpx;
+}
