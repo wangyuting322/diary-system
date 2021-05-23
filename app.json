@@ -8,7 +8,8 @@
     "pages/weather/weather",
     "pages/mine/mine",
     "pages/info/info",
-    "pages/edit/edit"
+    "pages/edit/edit",
+    "pages/calendar/calendar"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

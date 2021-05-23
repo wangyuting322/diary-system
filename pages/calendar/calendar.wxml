@@ -1,0 +1,21 @@
+<view style="width: 90%;height:640rpx;overflow:hidden;margin: 0 auto 40rpx;">
+  <calendar
+    id="calendar"
+    config="{{calendarConfig}}"
+    bind:onSwipe="onSwipe"
+    bind:whenChangeWeek="whenChangeWeek"
+    bind:whenChangeMonth="whenChangeMonth"
+    bind:takeoverTap="takeoverTap"
+    bind:afterTapDate="afterTapDate"
+    bind:afterCalendarRender="afterCalendarRender"
+  ></calendar>
+</view>
+
+
+<view wx:if='{{info}}' class="show-info-wrap">
+ <view wx:for="{{info}}" key='_id'>
+<view>日记标题：{{item.title}}</view>
+<view>日记内容：{{item.content}}</view>
+<view>日记时间：{{item.time}}</view>
+ </view>
+</view>

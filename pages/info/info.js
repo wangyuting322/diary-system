@@ -19,7 +19,7 @@ Page({
       .get()
       .then(res => {
         let info = res.data
-        info.time = moment(info.time).add(8,'h').format('YYYY-MM-DD hh:mm:ss')
+        info.time = moment(info.time).format('YYYY-MM-DD HH:mm:ss')
         this.setData({
           info,
         })

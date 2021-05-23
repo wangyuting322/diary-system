@@ -170,7 +170,7 @@ Page({
       .then(res => {
         console.log('getList:', res)
         let list = res.data.map(item => {
-          item.time = moment(item.time).add(8, 'h').format('YYYY-MM-DD hh:mm:ss');
+          item.time = moment(item.time).format('YYYY-MM-DD HH:mm:ss');
           item.slideButtons = [...this.data.slideButtons]
           if (item.isLove) {
             item.slideButtons.splice(1, 1)

@@ -9,7 +9,7 @@
     </mp-cell>
     <mp-cell prop="content" title="日记内容">
       <textarea data-field="content" class="weui-textarea" value='{{formData.content}}' bindinput="changeInput"
-        placeholder="请输入日记内容" style="height: 1.25em" />
+        placeholder="请输入日记内容" style="height:3.3em" />
       </mp-cell>
   </mp-form>
 

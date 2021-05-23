@@ -15,6 +15,11 @@
 						<view >收藏</view>
 					</view>
 				</view>
+				<view class="weui-cells">
+					<view class="weui-cell" bindtap="clickCalendar">
+						<view >日历</view>
+					</view>
+				</view>
 			</view>
 	
 			
