@@ -55,6 +55,12 @@ Page({
     // 获取当前面板日期
     this.getCalendarDates()
   },
+   /**
+   * 切换时间（年月）时获取当前时间段内的日记
+   */
+  onSwipe(e) {
+    this.getCalendarDates()
+  },
   /**
    * 获取当前月份的日期
    */
